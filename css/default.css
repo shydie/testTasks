@@ -1,0 +1,413 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input:focus,
+button,
+textarea {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+body,
+.content,
+section,
+.row,
+.wrapper,
+.clearfix,
+.form-group,
+.super-wrapper {
+  position: relative;
+}
+
+.row:after,
+.wrapper:after,
+.clearfix:after,
+.form-group:after,
+.super-wrapper:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: 0;
+}
+
+a.underline:hover {
+  text-decoration: none;
+}
+
+/*Inputs*/
+.form-input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 45px;
+  line-height: 37px;
+  padding: 0 10px 0 17px;
+  font-size: 14px;
+  font-family: "Gotham Book";
+  color: #aaa;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #aaa;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.form-input::-moz-placeholder {
+  color: #aaa;
+}
+
+.form-input:-moz-placeholder {
+  color: #aaa;
+}
+
+.form-input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.form-input:focus {
+  border-color: #222;
+  color: #222;
+}
+
+.form-input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form-input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form-input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-input.error {
+  border-color: red;
+}
+
+.form-input + .form-input {
+  float: right;
+}
+
+input[readonly] {
+  background-color: #f5f5f5;
+}
+
+input[readonly]:hover, input[readonly]:focus {
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+input[readonly]:hover::-webkit-input-placeholder, input[readonly]:focus::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+input[readonly]:hover::-moz-placeholder, input[readonly]:focus::-moz-placeholder {
+  color: #aaa;
+}
+
+input[readonly]:hover:-moz-placeholder, input[readonly]:focus:-moz-placeholder {
+  color: #aaa;
+}
+
+input[readonly]:hover:-ms-input-placeholder, input[readonly]:focus:-ms-input-placeholder {
+  color: #aaa;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  border-color: red;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  border-color: green;
+}
+
+.radio {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.radio:checked + .radio-view:before {
+  position: absolute;
+  content: '';
+  top: 1px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #222;
+}
+
+.radio-view {
+  display: inline-block;
+  position: relative;
+  margin-left: -12px;
+  margin-right: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 1px solid #9e9e9e;
+  border-radius: 2px;
+}
+
+.radio-view:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 1px;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-raius: 2px;
+  transition: all 0.2s ease 0s;
+}
+
+.error {
+  display: block;
+  margin-top: 5px;
+  color: red;
+}
+
+/*Buttons*/
+.btn {
+  display: block;
+  width: 350px;
+  height: 52px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 52px;
+  border: 1px solid #272925;
+  color: #222;
+  font-size: 22px;
+  font-family: "Gotham Book";
+  text-decoration: none;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #222;
+  border-color: #222;
+  color: #fff;
+}
+
+.btn.btn-black {
+  background-color: #222;
+  border-color: #222;
+  color: #fff;
+}
+
+.btn.btn-black:hover {
+  background-color: #fff;
+  border-color: #272925;
+  color: #222;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  color: #2c2828;
+  font-family: "Gotham Book", Arial, sans-serif;
+}
+
+.wrapper {
+  width: 1166px;
+  margin: 185px auto;
+  padding: 0 12px;
+}
+
+.section-title {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+.stripe {
+  height: 1px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #c0c0c0;
+  border: none;
+}
+
+.nav {
+  width: 263px;
+  float: left;
+  margin-right: 31px;
+}
+
+.nav-list {
+  display: block;
+  width: 100%;
+}
+
+.nav-item {
+  display: block;
+  width: 100%;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  line-height: 37px;
+  text-align: center;
+  border: 2px solid #272925;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item:last-child .nav-link {
+  margin-bottom: 0;
+}
+
+.nav-link:hover {
+  background-color: #222;
+  border-color: #222;
+}
+
+.nav-text {
+  vertical-align: middle;
+  color: #222;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover .nav-text {
+  color: #fff;
+}
+
+.col {
+  width: 350px;
+  float: left;
+}
+
+.col + .col {
+  float: right;
+}
+
+.profile {
+  width: 717px;
+  float: left;
+}
+
+.profile-title {
+  color: #2c2828;
+  font-family: "Gotham Medium";
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+  padding-top: 27px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.bottom-form-group {
+  margin-bottom: 20px;
+}
+
+.profile-form__phone {
+  margin-bottom: 42px;
+}
+
+.form-subtitle {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.radio-form-group {
+  width: 152px;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.radio-form-group__gender {
+  margin-bottom: 50px;
+}
+
+.add-kid-btn {
+  margin-bottom: 50px;
+}

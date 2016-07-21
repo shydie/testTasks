@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+	<div class="wrapper">
+		<aside class="nav">
+			<h2 class="section-title">My account</h2>
+			<hr class="stripe">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link">
+						<span class="nav-text">My profile</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link">
+						<span class="nav-text">Address Book</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link">
+						<span class="nav-text">Favourites</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link">
+						<span class="nav-text">My Orders</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:void(0)" class="nav-link">
+						<span class="nav-text">Contact Us</span>
+					</a>
+				</li>
+			</ul>
+		</aside>
+		<div class="profile">
+			<h2 class="section-title">My profile</h2>
+			<div class="profile-title">Tell us more</div>
+			<form id="profileForm" class="profile-form">
+				<div class="form-group">
+					<div class="col">
+						<input id="firstName" type="text" name="first-name" data-name="Your Name" class="form-input" minlength="2" placeholder="First Name" required>
+					</div>
+					<div class="col">
+						<input id="lastName" type="text" name="last-name" class="form-input" minlength="2" placeholder="Last Name" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col">
+						<input id="phone" type="phone" name="phone" class="form-input profile-form__phone" placeholder="Phone Number" required minlength="9">
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="form-subtitle">For whom you buying for?</div>
+					<div class="radio-form-group">
+						<input id="myself" type="radio" name="buy-for" class="radio" value="myself"><label for="" class="radio-view"></label>
+						<span>For myself</span>
+					</div>
+					<div class="radio-form-group">
+						<input type="radio" name="buy-for" class="radio" value="kids" checked="checked"><label for="" class="radio-view"></label>
+						<span>For the kids</span>
+					</div>
+				</div>
+				<hr class="stripe">
+				<div class="clearfix">
+					<div class="form-subtitle">Select gender</div>
+					<div class="radio-form-group radio-form-group__gender">
+						<input type="radio" name="gender" class="radio" value="male" checked="checked"><label for="" class="radio-view"></label>
+						<span>Male</span>
+					</div>
+					<div class="radio-form-group radio-form-group__gender">
+						<input type="radio" name="gender" class="radio" value="female"><label for="" class="radio-view"></label>
+						<span>Female</span>
+					</div>
+				</div>
+				<div class="form-group bottom-form-group child-name-group">
+					<div class="col">
+						<div class="form-subtitle">Name</div>
+						<input id="childName" type="text" name="child-name" class="form-input" placeholder="Name" required minlength="2">
+					</div>
+				</div>
+				<div class="form-group bottom-form-group">
+					<div class="col">
+						<div class="form-subtitle">Date of birth</div>
+						<input id="birthDate" type="text" name="birth-date" class="form-input" placeholder="(DD/MM/YYYY)" required>
+					</div>
+					<div class="col">
+						<div class="form-subtitle">Height</div>
+						<input id="height" type="text" name="height" class="form-input" placeholder="160 cm" minlength="6" required>
+					</div>
+				</div>
+				<a href="javascript:void(0)" class="btn add-kid-btn">+ Add kid</a>
+				<button id="saveButton" href="javascript:void(0)" class="btn btn-black">Save changes</button>
+			</form>
+		</div>
+	</div>
+	<script src="libs/jquery-1.11.2.min.js"></script>
+	<script src="libs/jquery.validate.min.js"></script>
+	<script src="libs/jquery.mask.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
